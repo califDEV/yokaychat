@@ -1,4 +1,4 @@
-import os
+#import os
 
 from moviepy.editor import VideoFileClip
 
@@ -8,7 +8,7 @@ class Circle:
     def __init__(self, bot):
         self.bot = bot
 
-
+"""
 
         @bot.message_handler(content_types=['video'])
         def handle_video(message):
@@ -40,3 +40,4 @@ class Circle:
 
             except Exception as e:
                 bot.reply_to(message, f"Произошла ошибка: {e}.")
+"""
