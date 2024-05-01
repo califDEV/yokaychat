@@ -91,6 +91,17 @@ class Messages:
             else:
                 bot.reply_to(message, "Нужно написать ответом на сообщение")
 
+        @bot.message_handler(func=lambda message: message.text.lower() == "ушатать")
+        def dfsfg(message):
+            if message.reply_to_message and message.reply_to_message.from_user:
+                user1 = message.from_user.username
+                user2 = message.reply_to_message.from_user.username
+                boom_text = (f"@{user1} <b>Ушатал</b> @{user2}\n\n@{user2} "
+                             f"Иди проспись, малыш")
+                bot.reply_to(message, boom_text)
+            else:
+                bot.reply_to(message, "Нужно написать ответом на сообщение")
+
 
         @bot.message_handler(func=lambda message: message.text.lower() == "хелп")
         def help_message(message):
